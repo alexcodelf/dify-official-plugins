@@ -1,0 +1,33 @@
+author: gpustack
+created_at: '2025-02-05T15:00:00Z'
+description:
+  en_US: GetImg API integration for image generation and scraping.
+icon: icon.svg
+label:
+  en_US: GPUStack is an open-source GPU cluster manager for running AI models.
+  zh_CN: GPUStack 是一款开源的 GPU 集群管理工具，专为 AI 模型部署和运行而设计。
+meta:
+  arch:
+  - amd64
+  - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+name: gpustack
+plugins:
+  tools:
+  - provider/gpustack.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+- image
+type: plugin
+version: 0.0.1
